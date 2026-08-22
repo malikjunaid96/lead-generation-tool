@@ -30,6 +30,7 @@ FIELD_MASK = ",".join(
         "places.internationalPhoneNumber",
         "places.websiteUri",
         "places.googleMapsUri",
+        "nextPageToken"
     ]
 )
 
