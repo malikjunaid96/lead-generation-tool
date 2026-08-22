@@ -92,7 +92,9 @@ with st.sidebar:
     else:
         st.error("❌ No API Key Found")
     
-    max_results = st.slider("Max businesses to fetch", min_value=5, max_value=60, value=20, step=5)
+    # UPDATED: Changed value=20 to value=60 so it defaults to fetching the maximum amount.
+    max_results = st.slider("Max businesses to fetch", min_value=5, max_value=60, value=60, step=5)
+    
     scrape_delay = st.slider(
         "Delay between website visits (seconds)", min_value=0.5, max_value=5.0, value=1.5, step=0.5
     )
