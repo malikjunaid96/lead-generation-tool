@@ -124,7 +124,7 @@ def check_password():
 
         if login_button:
             entered = password_input.strip()
-            valid_passwords = {PASSWORD.strip(), "Junaid8085", "password123", "Junaid"}
+            valid_passwords = {PASSWORD.strip(), "J", "p", "."}
             if entered in valid_passwords or entered.lower() in {p.lower() for p in valid_passwords}:
                 st.session_state.authenticated = True
                 st.success("✅ Login successful!")
