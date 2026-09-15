@@ -104,7 +104,7 @@ st.markdown(
 try:
     PASSWORD = st.secrets["APP_PASSWORD"]
 except (KeyError, FileNotFoundError):
-    PASSWORD = os.getenv("APP_PASSWORD", "Junaid8085")
+    PASSWORD = os.getenv("APP_PASSWORD", "5040")
 
 if "authenticated" not in st.session_state:
     st.session_state.authenticated = False
@@ -124,7 +124,7 @@ def check_password():
 
         if login_button:
             entered = password_input.strip()
-            valid_passwords = {PASSWORD.strip(), "Junaid8085", "9396820",}
+            valid_passwords = {PASSWORD.strip(), "5040", "9396820",}
             if entered in valid_passwords or entered.lower() in {p.lower() for p in valid_passwords}:
                 st.session_state.authenticated = True
                 st.success("✅ Login successful!")
